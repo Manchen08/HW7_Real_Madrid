@@ -14,7 +14,7 @@ def unlock(conditions):
     #RD = Right Dashboard switch
     rd = str(conditions[2])
     #CL = Child Lock switch
-    cl = str(conditions[3])
+    ch = str(conditions[3])
     #ML = Master Unlock switch
     ml = str(conditions[4])
     #LI = Left Inside handle
@@ -38,20 +38,21 @@ def unlock(conditions):
     elif ml is "0":
         print("Master unlock switch engaged, doors cannot open.")
     #check for childlock engaged and test dashboard switches and outside handles
-    elif cl is "0":
-        if ((ld is "1" or lo is "1") and (rd is "1" or lo is "1")):
+    elif ch is "0":
+        print("Child lock is ",ch)
+        if (ld is "1" or lo is "1") and (rd is "1" or ro is "1"):
             print("Both doors open.")
         elif ld is "1" or lo is "1":
             print("Left door open.")
-        elif rd is "1" or lo is "1":
+        elif rd is "1" or ro is "1":
             print("Right door open.")
     #check for childlock disengaged and test dashboard switches, outside and inside handles
-    elif cl is "1":
-        if ((ld is "1" or lo is "1" or li is "1") and (rd is "1" or lo is "1" or li is "1")):
+    elif ch is "1":
+        if (ld is "1" or lo is "1" or li is "1") and (rd is "1" or ro is "1" or ri is "1"):
             print("Both doors open.")
         elif ld is "1" or lo is "1" or li is "1":
             print("Left door open.")
-        elif rd is "1" or lo is "1" or li is "1":
+        elif rd is "1" or ro is "1" or ri is "1":
             print("Right door open.")
     
 
