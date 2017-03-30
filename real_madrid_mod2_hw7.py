@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import sys
 from urllib.request import urlopen
-#from real_madrid_mod1_hw7.py import unlock
+from real_madrid_mod1_hw7 import unlock
 
 
 def i_can_open():
@@ -20,21 +20,21 @@ def i_can_open():
             #print out current record number
             print("Reading Record #",count)
             #print state of each control object
-            print("Left Dashboard Switch (0 or 1)",conditions[1])
-            print("Right Dashboard Switch (0 or 1)",conditions[2])
-            print("Child Lock Switch (0 or 1)",conditions[3])
-            print("Master Unlock Switch (0 or 1)",conditions[4])
-            print("Left Inside Handle (0 or 1)",conditions[5])
-            print("Left Outside Handle (0 or 1)",conditions[6])
-            print("Right Inside Handle (0 or 1)",conditions[7])
-            print("Right Outside Handle (0 or 1)",conditions[8])
-            print("Gear Shift Position (0 or 1)",conditions[9])
+            print("Left Dashboard Switch (0 or 1) = ",conditions[1])
+            print("Right Dashboard Switch (0 or 1) = ",conditions[2])
+            print("Child Lock Switch (0 or 1) = ",conditions[3])
+            print("Master Unlock Switch (0 or 1) = ",conditions[4])
+            print("Left Inside Handle (0 or 1) = ",conditions[5])
+            print("Left Outside Handle (0 or 1) = ",conditions[6])
+            print("Right Inside Handle (0 or 1) = ",conditions[7])
+            print("Right Outside Handle (0 or 1) = ",conditions[8])
+            print("Gear Shift Position (0 or 1) = ",conditions[9])
             count += 1
             #pass conditions to unlock() to check
             #unlock(conditions)
 
 
-Main function
+#Main function
 def main():
     """
     Test Function
