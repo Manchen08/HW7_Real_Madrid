@@ -11,7 +11,7 @@ def printDigit(d):
 def printBarCode(zipCode):
     code = []
     check = 0
-    for x in zipCode:
+    for x in str(zipCode):
         check = check + int(x)
 
     if(check % 10 == 0):
