@@ -19,7 +19,9 @@ def i_can_open():
             conditions = line.split()
             values = []
             for value in conditions:
-                values.append(value.decode("utf-8"))
+                decoded = value.decode("utf-8")
+                stripped = decoded.strip(",")
+                values.append(stripped)
             #print out current record number
             print("Reading Record #",count)
             #print state of each control object
